@@ -1,1 +1,2 @@
-
+# Anomaly detection using Autoencoders
+Follow the following steps to detect anomalies in a high-dimension dataset. You can apply this to unbalanced datasets too. During the training, input only normal transactions to the Encoder. The bottleneck layer will learn the latent representation of the normal input data. The Decoder will use the bottleneck layers output to reconstruct the normal transactions of the original input data. A fraudulent transaction will be different from a normal transaction. The Autoencoder will have trouble reconstructing the fraudulent transaction, and hence the reconstruction error will be high. You can flag a new transaction is fraudulent based on a specified threshold value for the reconstruction error.
